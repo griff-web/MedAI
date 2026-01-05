@@ -12,14 +12,14 @@ loguru==0.7.3
 lxml==6.0.2
 mpmath==1.3.0
 networkx==3.6.1
-numpy==1.26.1           # Downgraded from 2.4.0 → compatible with Python 3.10
+numpy==1.26.4                # Safe version for Python 3.10
 pillow==12.0.0
 PyWavelets==1.9.0
 PyYAML==6.0.3
 requests==2.32.5
 rich==14.2.0
 scikit-learn==1.8.0
-scipy==1.10.1            # Downgraded from 1.16.3 → compatible with Python 3.10
+scipy==1.10.1                 # Compatible with Python 3.10
 setuptools==80.9.0
 sympy==1.14.0
 threadpoolctl==3.6.0
@@ -28,14 +28,14 @@ typing_extensions==4.15.0
 urllib3==2.6.2
 watchfiles==1.1.1
 
-# FastAPI / web framework
+# FastAPI / Web
 fastapi==0.128.0
-starlette==0.28.0         # Updated to be compatible with FastAPI
-uvicorn==0.25.0           # Updated to work with FastAPI 0.128
+starlette==0.28.0
+uvicorn==0.25.0
 uvloop==0.22.1
 python-multipart==0.0.21
 Jinja2==3.1.6
-Markdown-it-py==4.0.0
+markdown-it-py==4.0.0
 mdurl==0.1.2
 MarkupSafe==3.0.3
 httptools==0.7.1
@@ -53,22 +53,11 @@ python-dotenv==1.2.1
 # OpenCV
 opencv-python-headless==4.8.1.78
 
-# ML / AI
-torch==2.9.1              # CPU-only
-torchvision==0.15.2       # CPU-only
-torchaudio==2.9.1         # CPU-only
+# ML / AI (CPU only)
+torch==2.9.1
+torchvision==0.15.2
+torchaudio==2.9.1
 
-# Optional: other utilities
-axios==0.4.0               # Keep only if used in Python (maybe unused, optional)
-triton==3.5.1              # Can be removed on CPU-only environments
-
-# Removed NVIDIA GPU packages:
-# nvidia-cublas-cu12==... 
-# nvidia-cuda-runtime-cu12==... 
-# nvidia-cudnn-cu12==...
-# These are **not compatible** with Render free tier (no GPU)
-
-# Notes:
-# 1. All PyTorch packages are CPU-only.
-# 2. All versions chosen are compatible with Python 3.10 (Render free tier).
-# 3. Removed GPU / CUDA-specific packages to avoid errors.
+# Optional / utilities
+axios==0.4.0           # Only if used
+triton==3.5.1          # Remove if not needed
